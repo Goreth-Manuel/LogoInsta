@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: #f9dc64;
+  --orange: #ff553e;
+  --purple: #b5008e;
+  
+  --blue: #3023ae;
+  --blue-alpha: #3023ae1f;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 486px;
+  height: 486px;
+  background: chocolate;
+  border-radius: 35%;
+  background-image: radial-gradient(
+    circle at bottom left,
+    var(--yellow),
+    var(--orange),
+    var(--purple)
+  );
+  position: fixed;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  background-image: radial-gradient(
+    circle at top left,
+    var(--blue),
+    var(--blue-alpha),
+    transparent
+  );
+  width: 486px;
+  height: 486px;
+  border-radius: 35%;
+}
+
+span {
+  width: 320px;
+  height: 320px;
+  border: 30px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 35%;
+}
+
+span::before,
+span::after {
+  content: "";
+  position: absolute;
+}
+
+span::before {
+  width: 220px;
+  height: 220px;
+  border: 30px solid #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+span::after {
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border-radius: 50%;
+  right: 21px;
+  top: 21px;
+}
