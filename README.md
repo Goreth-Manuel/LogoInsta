@@ -1,2 +1,2 @@
 # LogoInsta
-Desenhando a logo do Instagran para praticar alguns conceitos de CSS
+Desenhando a logo do Instagran para praticar alguns conceitos de CSS.
